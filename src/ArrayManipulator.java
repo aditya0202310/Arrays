@@ -49,16 +49,19 @@ public class ArrayManipulator {
         }
         System.out.println(sum/ arr.length);
     }
-    public static void switchPairs(String [] str){
-           if(str.length % 3 == 0){
-               for(int i = 0; i < str.length - 2; i++){
-
-               }
-           }
-        for(String test : str){
-            System.out.println(test);
+    public static void switchPairs(String [] str) {
+        String newValue = "";
+        if (str.length % 2 == 0) {
+            for (int i = 0; i < str.length - 1; i++) {
+                newValue = str[i];
+                str[i] = str[i + 1];
+                str[i + 1] = newValue;
+            }
+            for (String test : str) {
+                System.out.println(test + " ");
+            }
+            System.out.print("Finished!");
         }
-        System.out.println("Finished!");
     }
 //
 //    public static int maxValue(int [] arr) {
@@ -82,7 +85,7 @@ public class ArrayManipulator {
 
         public static void main (String[]args){
         String [] switchPairs;
-        switchPairs = new String[]{"a", "bb", "c", "ddd", "ee", "f", "g"};
+        switchPairs = new String[]{"a", "bb", "c"};
 //            double[] ListOne;
 //            ListOne = new double []{12, 7, -1, 25, 2, 39};
 //            computeAverage(ListOne);
